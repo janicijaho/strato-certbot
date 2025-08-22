@@ -7,4 +7,4 @@ FROM certbot/certbot
 ADD ./ ./
 RUN chmod +x strato_certbot/*.py
 RUN pip3 install --no-cache-dir -e .
-ENTRYPOINT ["sh",  "-c", "certbot certonly --agree-tos --no-eff-email --email $EMAIL --manual --preferred-challenges dns --manual-auth-hook /opt/certbot/auth-hook.py --manual-cleanup-hook /opt/certbot/cleanup-hook.py  -d $DOMAIN -d *.$DOMAIN"]
+ENTRYPOINT ["sh",  "-c", "certbot certonly --agree-tos --no-eff-email --email $EMAIL --manual --preferred-challenges dns --manual-auth-hook /opt/certbot/strato_certbot/auth_hook.py --manual-cleanup-hook /opt/certbot/strato_certbot/cleanup_hook.py  -d $DOMAIN -d *.$DOMAIN"]
