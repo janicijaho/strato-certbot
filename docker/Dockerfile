@@ -1,4 +1,4 @@
-FROM python:3-alpine as test
+FROM python:3-alpine AS test
 ADD ./ ./
 RUN pip3 install --no-cache-dir -e ".[dev]"
 RUN python -m pytest ./test 
