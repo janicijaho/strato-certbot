@@ -11,7 +11,7 @@ The hook scripts provided by this project can be directly executed from the clon
 
 If global installation of dependencies is not an option (e.g. recent Ubuntu versions), installation via `pipx` into a dedicated virtual environment is recommended. As certbot is run from a cron job with root privileges, the hook scripts provided by this project must be globally available. This can be achieved with pipx by setting `PIPX_HOME` and `PIPX_BIN_DIR`:
 ```
-sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install --force git+https://https://github.com/Buxdehuda/strato-certbot
+sudo PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin pipx install --force git+https://github.com/Buxdehuda/strato-certbot
 ```
 
 This install all dependencies into a dedicated virtual environment within `/opt/pipx` and making the hook scripts available via entry points `strato-auth-hook` and `strato-cleanup-hook`.
